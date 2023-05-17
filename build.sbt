@@ -5,7 +5,7 @@ val scala213 = "2.13.10"
 
 name := "sendgrid4s"
 organization := "com.outr"
-version := "1.0.5"
+version := "1.0.6"
 
 scalaVersion := scala213
 crossScalaVersions := List(scala3, scala213)
@@ -35,5 +35,5 @@ outputStrategy := Some(StdoutOutput)
 fork := true
 
 libraryDependencies ++= Seq(
-  "com.outr" %% "spice-client-okhttp" % "0.0.30"
+  "com.outr" %% "spice-client-okhttp" % "0.0.31"
 )
