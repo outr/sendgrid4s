@@ -1,7 +1,7 @@
 // Scala versions
 val scala3 = "3.2.2"
 
-val scala213 = "2.13.10"
+val scala213 = "2.13.11"
 
 name := "sendgrid4s"
 organization := "com.outr"
