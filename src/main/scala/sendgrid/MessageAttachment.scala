@@ -1,6 +1,6 @@
 package sendgrid
 
-import fabric.rw.RW
+import fabric.rw._
 import spice.net.ContentType
 
 import java.nio.file.{Files, Path}
