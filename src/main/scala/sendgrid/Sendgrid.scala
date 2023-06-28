@@ -20,15 +20,11 @@ case class Sendgrid(apiKey: String) {
     .post
     .json(message.json.filterOne(RemoveEmptyFilter))
     .send()
-    .map { response =>
-      response.content.map { c =>
-        val s = c.asString
-        if (s == null || s.isEmpty) {
-          obj()
-        } else {
-          JsonParser(s)
-        }
-      }.getOrElse(obj())
+    .flatMap { response =>
+      response.content match {
+        case Some(c) => c.asString.map(s => JsonParser(s))
+        case None => IO.pure(obj())
+      }
     }
     .map { json =>
       json.get("errors" \ 0 \ "message").map(_.asString)
