@@ -35,5 +35,5 @@ outputStrategy := Some(StdoutOutput)
 fork := true
 
 libraryDependencies ++= Seq(
-  "com.outr" %% "spice-client" % "0.1.0"
+  "com.outr" %% "spice-client" % "0.1.1"
 )
