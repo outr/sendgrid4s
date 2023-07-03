@@ -22,7 +22,15 @@ case class Sendgrid(apiKey: String) {
     .send()
     .flatMap { response =>
       response.content match {
-        case Some(c) => c.asString.map(s => JsonParser(s))
+        case Some(c) => c
+          .asString
+          .map { jsonString =>
+            if (jsonString.trim.isEmpty) {
+              obj()
+            } else {
+              JsonParser(jsonString)
+            }
+          }
         case None => IO.pure(obj())
       }
     }

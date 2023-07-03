@@ -5,7 +5,7 @@ val scala213 = "2.13.11"
 
 name := "sendgrid4s"
 organization := "com.outr"
-version := "1.0.13"
+version := "1.0.14-SNAPSHOT"
 
 scalaVersion := scala213
 crossScalaVersions := List(scala3, scala213)
