@@ -9,5 +9,5 @@ Simple asynchronous, non-blocking client implementation of Sendgrid.
 ### Dependency Configuration
 
 ```scala
-libraryDependencies += "com.outr" %% "sendgrid4s" % "1.0.13"
+libraryDependencies += "com.outr" %% "sendgrid4s" % "1.0.16"
 ```
